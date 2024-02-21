@@ -116,5 +116,13 @@ class DoublyLinkedList<T> {
      * @return true if the list is empty and false otherwise
      */
     fun isEmpty(): Boolean = head == null // list is empty
-
+    override fun toString(): String{
+        var active = head
+        var output = StringBuilder()
+        while(active != null){
+            output.append(active.data)
+            active = active.next
+        }
+        return(output.toString())
+    }
 }

@@ -16,6 +16,7 @@ interface Stack<T> {
      * @return true if the stack is empty and false otherwise
      */
     fun isEmpty(): Boolean
+
 }
 
 class MyStack<T>:Stack<T>{
@@ -36,4 +37,7 @@ class MyStack<T>:Stack<T>{
         return list.isEmpty()
     }
 
+    override fun toString(): String {
+        return list.toString()
+    }
 }

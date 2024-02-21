@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Queue.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #5f826b; font-style: italic;}
+.s4 { color: #67a37c; font-style: italic;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Queue.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">interface </span><span class="s1">Queue</span><span class="s2">&lt;</span><span class="s1">T</span><span class="s2">&gt; {</span>
+    <span class="s3">/**</span>
+     <span class="s3">* Add [data] to the end of the queue.</span>
+     <span class="s3">*/</span>
+    <span class="s0">fun </span><span class="s1">enqueue</span><span class="s2">(</span><span class="s1">data: T</span><span class="s2">)</span>
+    <span class="s3">/**</span>
+     <span class="s3">* Remove the element at the front of the queue.  If the queue is empty, it remains unchanged.</span>
+     <span class="s3">* </span><span class="s4">@return </span><span class="s3">the value at the front of the queue or nil if none exists</span>
+     <span class="s3">*/</span>
+    <span class="s0">fun </span><span class="s1">dequeue</span><span class="s2">()</span><span class="s1">: T?</span>
+    <span class="s3">/**</span>
+     <span class="s3">* </span><span class="s4">@return </span><span class="s3">the value at the front of the queue or nil if none exists</span>
+     <span class="s3">*/</span>
+    <span class="s0">fun </span><span class="s1">peek</span><span class="s2">()</span><span class="s1">: T?</span>
+    <span class="s3">/**</span>
+     <span class="s3">* </span><span class="s4">@return </span><span class="s3">true if the queue is empty and false otherwise</span>
+     <span class="s3">*/</span>
+    <span class="s0">fun </span><span class="s1">isEmpty</span><span class="s2">()</span><span class="s1">: Boolean</span>
+<span class="s2">}</span>
+
+
+<span class="s0">class </span><span class="s1">MyQueue</span><span class="s2">&lt;</span><span class="s1">T</span><span class="s2">&gt;</span><span class="s1">:Queue</span><span class="s2">&lt;</span><span class="s1">T</span><span class="s2">&gt;{</span>
+    <span class="s1">private </span><span class="s0">val </span><span class="s1">list </span><span class="s2">= </span><span class="s1">DoublyLinkedList</span><span class="s2">&lt;</span><span class="s1">T</span><span class="s2">&gt;()</span>
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">enqueue</span><span class="s2">(</span><span class="s1">data: T</span><span class="s2">) {</span>
+        <span class="s1">list</span><span class="s2">.</span><span class="s1">pushBack</span><span class="s2">(</span><span class="s1">data</span><span class="s2">)</span>
+    <span class="s2">}</span>
+
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">dequeue</span><span class="s2">()</span><span class="s1">: T? </span><span class="s2">{</span>
+        <span class="s0">return </span><span class="s1">list</span><span class="s2">.</span><span class="s1">popFront</span><span class="s2">()</span>
+    <span class="s2">}</span>
+
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">peek</span><span class="s2">()</span><span class="s1">: T? </span><span class="s2">{</span>
+        <span class="s0">return </span><span class="s1">list</span><span class="s2">.</span><span class="s1">peekFront</span><span class="s2">()</span>
+    <span class="s2">}</span>
+
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">isEmpty</span><span class="s2">()</span><span class="s1">: Boolean </span><span class="s2">{</span>
+        <span class="s0">return </span><span class="s1">list</span><span class="s2">.</span><span class="s1">isEmpty</span><span class="s2">()</span>
+    <span class="s2">}</span>
+
+<span class="s2">}</span></pre>
+</body>
+</html>

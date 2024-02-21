@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Main.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">//TIP To &lt;b&gt;Run&lt;/b&gt; code, press &lt;shortcut actionId=&quot;Run&quot;/&gt; or</span>
+<span class="s0">// click the &lt;icon src=&quot;AllIcons.Actions.Execute&quot;/&gt; icon in the gutter.</span>
+<span class="s2">fun </span><span class="s1">main</span><span class="s3">() {</span>
+    <span class="s2">val </span><span class="s1">firstStack </span><span class="s3">= </span><span class="s1">MyStack</span><span class="s3">&lt;</span><span class="s1">String?</span><span class="s3">&gt;()</span>
+    <span class="s2">val </span><span class="s1">storeStack </span><span class="s3">= </span><span class="s1">MyStack</span><span class="s3">&lt;</span><span class="s1">String?</span><span class="s3">&gt;()</span>
+    <span class="s1">firstStack</span><span class="s3">.</span><span class="s1">push</span><span class="s3">(</span><span class="s4">&quot;1&quot;</span><span class="s3">)</span>
+    <span class="s1">firstStack</span><span class="s3">.</span><span class="s1">push</span><span class="s3">(</span><span class="s4">&quot;2&quot;</span><span class="s3">)</span>
+    <span class="s1">firstStack</span><span class="s3">.</span><span class="s1">push</span><span class="s3">(</span><span class="s4">&quot;3&quot;</span><span class="s3">)</span>
+    <span class="s1">firstStack</span><span class="s3">.</span><span class="s1">push</span><span class="s3">(</span><span class="s4">&quot;4&quot;</span><span class="s3">)</span>
+    <span class="s2">while</span><span class="s3">(!</span><span class="s1">firstStack</span><span class="s3">.</span><span class="s1">isEmpty</span><span class="s3">()) {</span>
+        <span class="s1">storeStack</span><span class="s3">.</span><span class="s1">push</span><span class="s3">(</span><span class="s1">firstStack</span><span class="s3">.</span><span class="s1">pop</span><span class="s3">())</span>
+    <span class="s3">}</span>
+    <span class="s2">while</span><span class="s3">(!</span><span class="s1">storeStack</span><span class="s3">.</span><span class="s1">isEmpty</span><span class="s3">()){</span>
+        <span class="s1">firstStack</span><span class="s3">.</span><span class="s1">push</span><span class="s3">(</span><span class="s1">storeStack</span><span class="s3">.</span><span class="s1">pop</span><span class="s3">())</span>
+    <span class="s3">}</span>
+<span class="s3">}</span></pre>
+</body>
+</html>
