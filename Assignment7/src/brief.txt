@@ -1,0 +1,1 @@
+The associative array was very useful for the markov text generation. it made accesing words with various subsequent words more simple and the implementation successful.
